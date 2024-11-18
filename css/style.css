@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* || VARIABLES */
+
+:root {
+    /* FONTS FAMILIES */
+    --FF-HEADER: "Fraunces", sans-serif;
+    --FF-GENERIC: "Montserrat", sans-serif;
+
+    /* FONT COLORS */
+    --HEADER-FONT-COLOR: hsl(212, 21%, 14%);
+    --GENERIC-FONT-COLOR: hsl(228, 12%, 48%);
+    --BUTTON-FONT-COLOR: hsl(0, 0%, 100%);
+    --DISC-PRICE-FONT-COLOR: hsl(158, 36%, 37%);
+    
+    /* COLORS */
+    --BG-BUTTON: hsl(158, 36%, 37%);
+    --BG-BUTTON-HOVER:  hsl(158, 72%, 14%);
+    --BG-BODY: hsl(30, 38%, 92%);
+    --BG-CARD: hsl(0, 0%, 100%);
+}
+
+/* GENERAL STYLES */
+
+body {
+    margin:0;
+    min-height: 100svh;
+    background-color: var(--BG-BODY);
+}
+
+main {
+    margin: 0;
+    min-height: calc(100svh - 5rem);
+    background-color: var(--BG-BODY);
+}
+
+/* UTILITY CLASSES */
+
+.button:hover,
+.button:focus {
+    background-color: var(--BG-BUTTON-HOVER);
+    cursor: pointer;
+}
+
+/* COMPONENTS */
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.container {
+    margin:0;
+    min-height: calc(100svh - 2rem);
+    background-color: var(--BG-BODY);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 600px;
+    /* max-height: 450px; */
+}
+
+.card--style {
+    background-color: var(--BG-CARD);
+    border-radius: 8px;
+    font-family: var(--FF-GENERIC);
+    color: var(--GENERIC-FONT-COLOR);
+}
+
+.product {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.3rem;
+}
+
+.product__type--style {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    font-weight: 500;
+}
+
+.product__title--style {
+    font-family: var(--FF-HEADER);
+    color: var(--HEADER-FONT-COLOR);
+    font-size: 2rem;
+    font-weight: 700;
+    text-wrap: balance;
+    line-height: 1em;
+}
+
+.product__descr--style {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.8em;
+    letter-spacing: 0.02em;
+}
+
+.product__price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price--disc {
+    color: var(--DISC-PRICE-FONT-COLOR);
+    font-family: var(--FF-HEADER);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.price--full {
+        font-size: 0.85rem;
+        text-decoration: line-through;
+        font-weight: 500;
+    }
+
+    .button {
+        background-color: var(--BG-BUTTON);
+        font-family: var(--FF-GENERIC);
+        font-size: 0.9rem;
+        color: var(--BUTTON-FONT-COLOR);
+        font-weight: 650;
+        padding-block: 1em;
+        border: none;
+        border-radius: 8px;
+        letter-spacing: 0.01rem;
+    }
+    
+    svg {
+        margin-right: 0.5em;
+    }
+
+
+/* FOOTER */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    padding-top: 0.1em; 
+   
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* MOBILE */
+
+@media (width <= 48em) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 354px;
+        height: auto;
+    }
+
+    .card__img {
+        width: 100%;
+        height: auto; 
+        /* aspect-ratio: 16 / 9 ; */
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .product{
+        padding: 1.5em 1.7em;
+        gap: 0.8rem;
+    }
+
+    .product__title--style {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .product__descr--style {
+        font-size: 0.9rem;
+        letter-spacing: 0;
+        line-height: 1.7em;      
+    }
+
+}
