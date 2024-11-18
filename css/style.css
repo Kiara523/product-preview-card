@@ -86,7 +86,6 @@ main {
     flex-direction: row;
     justify-content: center;
     max-width: 600px;
-    /* max-height: 450px; */
 }
 
 .card--style {
@@ -198,7 +197,6 @@ main {
     .card__img {
         width: 100%;
         height: auto; 
-        /* aspect-ratio: 16 / 9 ; */
         object-fit: cover;
         border-radius: 8px 8px 0 0;
     }
@@ -206,11 +204,6 @@ main {
     .product{
         padding: 1.5em 1.7em;
         gap: 0.8rem;
-    }
-
-    .product__title--style {
-        font-size: 2rem;
-        font-weight: 700;
     }
 
     .product__descr--style {
